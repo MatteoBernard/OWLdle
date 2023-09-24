@@ -39,4 +39,20 @@ public class IndexController {
     	controller.setStage(this.stage);
     	controller.setScene(this.scene);
     }
+	
+	@FXML
+    void lancerCapacitesOW(ActionEvent event) throws IOException {
+
+    	FXMLLoader fxmlLoader = new FXMLLoader();
+    	InputStream fxmlStream = getClass().getResourceAsStream("/bernardmatteo/owldle/view/ow-abilities-view.fxml");
+    	Parent root = fxmlLoader.load(fxmlStream);
+
+    	Scene sceneAjout = new Scene(root);
+    	sceneAjout.getStylesheets().add(getClass().getResource("/bernardmatteo/owldle/styles/owl-players-style.css").toExternalForm());
+    	this.stage.setScene(sceneAjout);
+
+    	OWAbilitiesController controller = fxmlLoader.getController();
+    	controller.setStage(this.stage);
+    	controller.setScene(this.scene);
+    }
 }

@@ -16,7 +16,7 @@
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="800.0">
          <children>
-            <Text id="titre" layoutX="364.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OWLdle" textAlignment="CENTER">
+            <Text id="titre" layoutX="342.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OWLdle" textAlignment="CENTER" wrappingWidth="115.1383056640625">
                <font>
                   <Font name="Roboto Condensed" size="24.0" />
                </font>
@@ -65,7 +65,7 @@
                </font>
             </Button>
             <Label fx:id="indice" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="412.0" prefHeight="18.0" prefWidth="410.0" textAlignment="CENTER" />
-            <TextField fx:id="champEntree" layoutX="265.0" layoutY="440.0" prefHeight="26.0" prefWidth="184.0" />
+            <TextField fx:id="champEntree" layoutX="308.0" layoutY="442.0" prefHeight="26.0" prefWidth="184.0" />
          </children>
       </AnchorPane>
    </children>

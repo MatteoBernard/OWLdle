@@ -21,6 +21,7 @@
                </font>
             </Text>
             <Button layoutX="102.0" layoutY="177.0" mnemonicParsing="false" onAction="#lancerJoueursOWL" prefHeight="52.0" prefWidth="116.0" text="Joueurs OWL" />
+            <Button layoutX="102.0" layoutY="248.0" mnemonicParsing="false" onAction="#lancerCapacitesOW" prefHeight="52.0" prefWidth="116.0" text="Capacités OW" />
          </children>
       </AnchorPane>
    </children>

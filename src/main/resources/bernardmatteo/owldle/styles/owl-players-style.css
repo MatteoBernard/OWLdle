@@ -49,8 +49,6 @@ AnchorPane {
 
 /* Styliser le champ de texte */
 #champEntree {
-    -fx-pref-width: 270px;
-    -fx-pref-height: 28px;
     -fx-background-color: #ffffff;
     
 }
@@ -69,8 +67,6 @@ AnchorPane {
 }
 
 /* Styliser le label d'indice */
-#indice {
-    -fx-pref-width: 410px;
-    -fx-pref-height: 18px;
+#indice, #indTentatives {
     -fx-text-fill: #ffffff;
 }

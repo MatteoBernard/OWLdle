@@ -86,6 +86,10 @@ public class OWLPlayersController {
     	indice.setText("Entrez le pseudo d'un joueur !");
     	
     	autoCompletionBinding = TextFields.bindAutoCompletion(champEntree, maPartie.getPseudos());
+    	autoCompletionBinding.setPrefWidth(champEntree.getPrefWidth());
+    	autoCompletionBinding.setOnAutoCompleted(event -> {
+    	    autoCompletionBinding.getAutoCompletionPopup().hide();
+    	});
     }
 
     @FXML

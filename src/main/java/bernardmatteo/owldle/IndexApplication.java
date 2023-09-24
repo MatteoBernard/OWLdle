@@ -27,6 +27,7 @@ public class IndexApplication extends Application {
         stage.setScene(scene);
 
         stage.setTitle("OWLdle");
+        stage.setResizable(false);
         
         IndexController monController = fxmlLoader.getController();
         monController.setStage(stage);	

@@ -1,9 +1,12 @@
 package bernardmatteo.owldle.db;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
+import org.apache.commons.io.FileUtils;
 import org.bson.Document;
 
 import com.mongodb.ConnectionString;
@@ -44,7 +47,7 @@ public class DBServices {
 		mongoClient.close();
 	}
 	
-	// opérations
+	// opérations sur les joueurs
 	
 	public static Document creerJoueur(String pseudo, String pays, String role, String team) {
 		return new Document("pseudo", pseudo).append("pays", pays).append("role", role).append("team", team);
@@ -80,6 +83,54 @@ public class DBServices {
         ));
         Document randomDocument = aggregation.first();
         Map map = randomDocument;
+        fermerDB();
+        return map;
+	}
+	
+	// opérations sur les spells
+	
+	public static byte[] creerTabBytes(String path) throws IOException {
+		return FileUtils.readFileToByteArray(new File(path));
+	}
+	
+	public static Document creerSpell(String nom, String hero, byte[] tabBytes) {
+		return new Document("nom", nom).append("hero", hero).append("tabBytes", tabBytes);
+	}
+	
+	public static void ajouterSpell(Document spell, String nomCollec) {
+		connexionDB() ;
+		database.getCollection(nomCollec).insertOne(spell);
+		fermerDB();
+	}
+	
+	public static Map recupererSpell(String nom, MongoCollection<Document> collection) {
+		Document query = new Document("nom", nom);
+		Document document = (Document) collection.find(query).first();
+        Map map = document;
+        return map;
+	}
+	
+	public static Map recupererSpellAleatoire(MongoCollection<Document> collection) {
+		connexionDB() ;
+        AggregateIterable<Document> aggregation = collection.aggregate(Arrays.asList(
+                new Document("$sample", new Document("size", 1))
+        ));
+        Document randomDocument = aggregation.first();
+        Map map = randomDocument;
+        fermerDB();
+        return map;
+	}
+	
+	// opérations sur les joueurs
+	
+	public static Document creerHeros(String nom, byte[] tabBytes) {
+		return new Document("nom", nom).append("tabBytes", tabBytes);
+	}
+	
+	public static Map recupererHeros(String nom, MongoCollection<Document> collection) {
+		Document query = new Document("nom", nom);
+		Document document = (Document) collection.find(query).first();
+        Map map = document;
         return map;
 	}
 }

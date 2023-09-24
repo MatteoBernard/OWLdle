@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bernardmatteo.owldle.controller.OWAbilitiesController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Text id="titre" layoutX="342.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OWLdle" textAlignment="CENTER" wrappingWidth="115.1383056640625">
+               <font>
+                  <Font name="Roboto Condensed" size="24.0" />
+               </font>
+            </Text>
+            <Text id="sousTitre" layoutX="308.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capacités OW" textAlignment="CENTER" wrappingWidth="184.03851318359375">
+               <font>
+                  <Font name="Roboto Condensed" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Text>
+            <Button layoutX="206.0" layoutY="515.0" mnemonicParsing="false" onAction="#commencerPartie" prefHeight="48.0" prefWidth="92.0" text="Recommencer">
+               <font>
+                  <Font name="Roboto Condensed" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="502.0" layoutY="515.0" mnemonicParsing="false" onAction="#lancerIndex" prefHeight="48.0" prefWidth="134.0" text="Retour">
+               <font>
+                  <Font name="Roboto Condensed" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="boutonValider" layoutX="353.0" layoutY="491.0" mnemonicParsing="false" onAction="#validerHero" prefHeight="21.0" prefWidth="94.0" text="Valider">
+               <font>
+                  <Font name="Roboto Condensed" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="indice" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="376.0" prefHeight="28.0" prefWidth="510.0" textAlignment="CENTER" />
+            <TextField fx:id="champEntree" layoutX="308.0" layoutY="442.0" prefHeight="26.0" prefWidth="184.0" />
+            <Rectangle fx:id="rectHeros" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="222.0" layoutX="433.0" layoutY="146.0" stroke="BLACK" strokeType="INSIDE" width="222.0" />
+            <ImageView fx:id="imgHero" fitHeight="220.0" fitWidth="220.0" layoutX="434.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="indTentatives" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="236.0" layoutY="404.0" prefHeight="28.0" prefWidth="327.0" textAlignment="CENTER" />
+            <Rectangle fx:id="rectSpell" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="222.0" layoutX="141.0" layoutY="146.0" stroke="BLACK" strokeType="INSIDE" width="222.0" />
+            <ImageView fx:id="imgSpell" fitHeight="220.0" fitWidth="220.0" layoutX="145.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
