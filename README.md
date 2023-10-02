@@ -23,5 +23,5 @@ Il y a également la version Zip des fichiers du jeu, ainsi que le Jar exécutab
 Vous pouvez tout télécharger ici : https://drive.google.com/drive/folders/15r5KdZ-4n1SWTB2WaM05E_F3E1D6bFF2?usp=sharing
 
 # MongoDB
-Dernière mise à jour de la base de donnée : 24/09/23
+Dernière mise à jour de la base de donnée : 02/10/23
 Prochaine mise à jour de la base de donnée : début de la saison 7 de l'Overwatch League OU sortie d'une nouvelle version du jeu.
